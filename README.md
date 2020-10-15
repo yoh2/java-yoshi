@@ -12,7 +12,7 @@
  - sub1/build/libs/sub1-1.0.jar
  - sub2/build/libs/sub2-1.0.jar
 
-適当なひとつのディレクトリに置いて、その中で
+適当なひとつのディレクトリに纏めて、その中で
 
 ```sh
 java -cp program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-1.0.jar:hoge-2.4.jar org.example.Main
