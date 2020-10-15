@@ -5,5 +5,5 @@ public class Fuga {
         System.out.println("Fuga#hoge() [ver 2.4]");
     }
 
-    // Foo#bar() has been removed
+    // Fuga#bar() has been removed
 }
