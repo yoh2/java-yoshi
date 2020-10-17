@@ -6,6 +6,8 @@ jar.archiveBaseName = 'hoge'
 group 'com.example'
 version '1.0'
 
+compileJava.options.encoding 'UTF-8'
+
 repositories {
     mavenCentral()
 }

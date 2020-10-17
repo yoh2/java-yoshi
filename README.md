@@ -17,6 +17,10 @@
 ```sh
 java -cp program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-1.0.jar:hoge-2.4.jar org.example.Main
 ```
+(Windows の場合はこっち)
+```bat
+java -cp "program-1.0.jar;sub1-1.0.jar;sub2-1.0.jar;hoge-1.0.jar;hoge-2.4.jar" org.example.Main
+```
 
 としてみましょう。
 
@@ -33,21 +37,33 @@ Piyo#baz()
 ```sh
 java -cp program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-1.0.jar org.example.Main
 ```
+(Windows の場合はこっち)
+```bat
+java -cp "program-1.0.jar;sub1-1.0.jar;sub2-1.0.jar;hoge-1.0.jar" org.example.Main
+```
 
 としてみましょう。 hoge-2.4.jar を削ったものです。 `Piyo` が見付からんと言われて例外吐きますね。
 
 さて今度は
 
 ```sh
-java -cp program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-2.4.jar org.example.Main
+java -cp "program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-2.4.jar" org.example.Main
+```
+(Windows の場合はこっち)
+```bat
+java -cp "program-1.0.jar;sub1-1.0.jar;sub2-1.0.jar;hoge-2.4.jar" org.example.Main
 ```
 
 としてみましょう。 hoge-1.0.jar を削ったものです。 `Fuga.bar()` なぞ知らんと言われてやっぱり例外発生。
 
 最後に
 
-```
+```sh
 java -cp program-1.0.jar:sub1-1.0.jar:sub2-1.0.jar:hoge-2.4.jar:hoge-1.0.jar org.example.Main
+```
+(Windows の場合はこっち)
+```bat
+java -cp "program-1.0.jar;sub1-1.0.jar;sub2-1.0.jar;hoge-2.4.jar;hoge-1.0.jar" org.example.Main
 ```
 
 としてみましょう。最初の版とは hoge-1.0.jar と hoge-2.4.jar の順序が逆です。
